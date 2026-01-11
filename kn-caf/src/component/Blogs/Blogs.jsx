@@ -11,7 +11,7 @@ const Blogs = () => {
   console.log(blogs)
   return (
     <>
-          <div className="w-2/3 border-2">
+          <div className="w-2/3">
               {
                   blogs.map(dataBlog => (
                       <Blog dataBlog={dataBlog}></Blog>
