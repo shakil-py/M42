@@ -1,6 +1,7 @@
-const Blog = (dataBlog) => {
-  const data = dataBlog.dataBlog;
-  const { author, cover, title, post_date, hashtags, reading_time } = data;
+const Blog = ({dataBlog,handelBmarks}) => {
+  
+  const { author, cover, title, post_date, hashtags, reading_time } = dataBlog;
+  
 
   return (
     <>
@@ -16,7 +17,7 @@ const Blog = (dataBlog) => {
           </div>
           <div className="flex items-center ">
             <p className="font-semibold">{reading_time} minutes read </p>
-            <button>
+            <button onClick={handelBmarks}>
               <i className="">
                 <svg className="h-6 w-10 font-semibold"
                 //   xmlns="http://www.w3.org/2000/svg"

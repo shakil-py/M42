@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Blog from "./Blog/Blog";
 
-const Blogs = () => {
+const Blogs = ({handelBmarks}) => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     fetch("../../../public/blogs.json")
@@ -14,7 +14,7 @@ const Blogs = () => {
           <div className="w-2/3">
               {
                   blogs.map(dataBlog => (
-                      <Blog dataBlog={dataBlog}></Blog>
+                      <Blog dataBlog={dataBlog} handelBmarks={handelBmarks}></Blog>
                   ))
               }
         
