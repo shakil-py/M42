@@ -3,17 +3,28 @@ import { useState } from "react";
 import "./App.css";
 import Blogs from "./component/Blogs/Blogs";
 import Header from "./component/header/Navbar";
+import BookMarks from './component/BookMark/BookMarks';
 
 function App() {
   const [bookMarks, setBookMarks] = useState([]);
-  const handelBmarks = blog => {
-    console.log("add soon")
+  const handelBmarks = blogTItle => {
+    const bkMarks=[...bookMarks,blogTItle]
+    setBookMarks(bkMarks)
+    
   }
+  
   return (
     <>
       <div className="w-11/12 mx-auto">
         <Header></Header>
-        <Blogs handelBmarks={handelBmarks}></Blogs>
+      </div>
+      <div className="flex w-11/12 mx-auto">
+        <div className="w-2/3 ">
+          <Blogs handelBmarks={handelBmarks}></Blogs>
+        </div>
+        <div className="1/3">
+          <BookMarks bookMarks={bookMarks}></BookMarks>
+        </div>
       </div>
     </>
   );

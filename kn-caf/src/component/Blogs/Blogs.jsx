@@ -8,10 +8,10 @@ const Blogs = ({handelBmarks}) => {
       .then((res) => res.json())
       .then((res) => setBlogs(res));
   }, []);
-  console.log(blogs)
+  // console.log(blogs)
   return (
     <>
-          <div className="w-2/3">
+          <div className="">
               {
                   blogs.map(dataBlog => (
                       <Blog dataBlog={dataBlog} handelBmarks={handelBmarks}></Blog>

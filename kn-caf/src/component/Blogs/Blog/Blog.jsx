@@ -1,7 +1,5 @@
-const Blog = ({dataBlog,handelBmarks}) => {
-  
+const Blog = ({ dataBlog, handelBmarks }) => {
   const { author, cover, title, post_date, hashtags, reading_time } = dataBlog;
-  
 
   return (
     <>
@@ -17,13 +15,14 @@ const Blog = ({dataBlog,handelBmarks}) => {
           </div>
           <div className="flex items-center ">
             <p className="font-semibold">{reading_time} minutes read </p>
-            <button onClick={handelBmarks}>
+            <button onClick={()=>handelBmarks(title)}>
               <i className="">
-                <svg className="h-6 w-10 font-semibold"
-                //   xmlns="http://www.w3.org/2000/svg"
-                //   width="20"
-                //   height="20"
-                //   viewBox="0 0 24 24"
+                <svg
+                  className="h-6 w-10 font-semibold"
+                  //   xmlns="http://www.w3.org/2000/svg"
+                  //   width="20"
+                  //   height="20"
+                  //   viewBox="0 0 24 24"
                 >
                   <path
                     fill="#000000"
