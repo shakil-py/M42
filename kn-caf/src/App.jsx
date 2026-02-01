@@ -4,6 +4,7 @@ import "./App.css";
 import Blogs from "./component/Blogs/Blogs";
 import Header from "./component/header/Navbar";
 import BookMarks from './component/BookMark/BookMarks';
+import Time from "./component/time/Time";
 
 function App() {
   const [bookMarks, setBookMarks] = useState([]);
@@ -12,10 +13,11 @@ function App() {
     setBookMarks(bkMarks)
     
   }
-  const [readTime, setTime] = useState([])
+  const [readTime, setTime] = useState(0)
   const MarkasRead = time => {
-    const newTime = readTime + time
+    const newTime = readTime+time
     setTime(newTime);
+    console.log(newTime)
   }
   
   return (
@@ -28,6 +30,7 @@ function App() {
           <Blogs handelBmarks={handelBmarks}MarkasRead={MarkasRead}></Blogs>
         </div>
         <div className="1/3">
+          <Time readTime={readTime}></Time>
           <BookMarks bookMarks={bookMarks}></BookMarks>
         </div>
       </div>

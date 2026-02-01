@@ -36,7 +36,7 @@ const Blog = ({ dataBlog, handelBmarks,MarkasRead }) => {
 
         <h1 className="font-bold text-4xl">{title} </h1>
         <p className="pt-2 mb-2">{hashtags}</p>
-        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black "onClick={MarkasRead}>
+        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black "onClick={()=>MarkasRead(reading_time)}>
           Mark As Read
         </button>
       </div>
