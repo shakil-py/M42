@@ -19,8 +19,6 @@ function App() {
     setTime(newTime);
     
   }
-  const [mkasrd, setNewmksrd] = useState([])
-  const 
   
   return (
     <>
