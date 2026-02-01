@@ -1,8 +1,8 @@
-const Time = ({ reading_time }) => {
-  console.log(reading_time);
+const Time = ({ readTime }) => {
+  
   return (
     <div>
-      <h1 className="text-4xl">My Total Reading Time : {reading_time}</h1>
+      <h1 className="text-4xl">My Total Reading Time : {readTime}</h1>
     </div>
   );
 };
