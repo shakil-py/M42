@@ -1,4 +1,4 @@
-const Blog = ({ dataBlog, handelBmarks }) => {
+const Blog = ({ dataBlog, handelBmarks,MarkasRead }) => {
   const { author, cover, title, post_date, hashtags, reading_time } = dataBlog;
 
   return (
@@ -15,10 +15,10 @@ const Blog = ({ dataBlog, handelBmarks }) => {
           </div>
           <div className="flex items-center ">
             <p className="font-semibold">{reading_time} minutes read </p>
-            <button onClick={()=>handelBmarks(title)}>
+            <button className="" onClick={()=>handelBmarks(title)}>
               <i className="">
                 <svg
-                  className="h-6 w-10 font-semibold"
+                  className="h-6 w-10 font-bold "
                   //   xmlns="http://www.w3.org/2000/svg"
                   //   width="20"
                   //   height="20"
@@ -36,7 +36,7 @@ const Blog = ({ dataBlog, handelBmarks }) => {
 
         <h1 className="font-bold text-4xl">{title} </h1>
         <p className="pt-2 mb-2">{hashtags}</p>
-        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black ">
+        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black "onClick={MarkasRead}>
           Mark As Read
         </button>
       </div>

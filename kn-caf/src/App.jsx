@@ -12,6 +12,11 @@ function App() {
     setBookMarks(bkMarks)
     
   }
+  const [readTime, setTime] = useState([])
+  const MarkasRead = time => {
+    const newTime = readTime + time
+    setTime(newTime);
+  }
   
   return (
     <>
@@ -20,7 +25,7 @@ function App() {
       </div>
       <div className="flex w-11/12 mx-auto">
         <div className="w-2/3 ">
-          <Blogs handelBmarks={handelBmarks}></Blogs>
+          <Blogs handelBmarks={handelBmarks}MarkasRead={MarkasRead}></Blogs>
         </div>
         <div className="1/3">
           <BookMarks bookMarks={bookMarks}></BookMarks>
