@@ -1,7 +1,7 @@
 const Time = ({ readTime }) => {
   
   return (
-    <div>
+    <div className="text-center pt-3 font-bold">
       <h1 className="text-4xl">My Total Reading Time : {readTime}</h1>
     </div>
   );

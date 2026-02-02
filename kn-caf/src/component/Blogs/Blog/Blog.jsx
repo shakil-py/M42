@@ -1,5 +1,5 @@
 const Blog = ({ dataBlog, handelBmarks,MarkasRead }) => {
-  const { author, cover, title, post_date, hashtags, reading_time } = dataBlog;
+  const {id, author, cover, title, post_date, hashtags, reading_time } = dataBlog;
 
   return (
     <>
@@ -15,7 +15,7 @@ const Blog = ({ dataBlog, handelBmarks,MarkasRead }) => {
           </div>
           <div className="flex items-center ">
             <p className="font-semibold">{reading_time} minutes read </p>
-            <button className="" onClick={()=>handelBmarks(title)}>
+            <button className="" onClick={()=>handelBmarks(dataBlog)}>
               <i className="">
                 <svg
                   className="h-6 w-10 font-bold "
@@ -36,7 +36,7 @@ const Blog = ({ dataBlog, handelBmarks,MarkasRead }) => {
 
         <h1 className="font-bold text-4xl">{title} </h1>
         <p className="pt-2 mb-2">{hashtags}</p>
-        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black "onClick={()=>MarkasRead(reading_time)}>
+        <button className="btn bg-blue-300 p-2 rounded-xl font-bold text-black "onClick={()=>MarkasRead(reading_time,id)}>
           Mark As Read
         </button>
       </div>
